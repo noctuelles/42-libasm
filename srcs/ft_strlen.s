@@ -1,22 +1,20 @@
 global ft_strlen 
 ft_strlen:
-    ; function prologue
+    ;function prologue
     push rbp
     mov rbp, rsp
-    sub rsp, 8
-    mov qword [rbp - 8], 0x0
+    push rdi
 .loop:
-    mov rax, rdi
-    add rax, qword [rbp - 8]
-    mov al, byte [rax]
-    cmp al, 0
+    mov al, byte [rdi]
+    cmp al, 0x0
     jz .ret
-    add qword [rbp - 8], 0x1
+    add rdi, 0x1
     jmp .loop
 .ret:
+    mov rax, rdi
+    pop rdi
+    sub rax, rdi
     ; function epilogue
-    mov rax, qword [rbp - 8]
     mov rsp, rbp
     pop rbp
     ret
-
