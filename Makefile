@@ -6,7 +6,7 @@
 #    By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 22:26:26 by plouvel           #+#    #+#              #
-#    Updated: 2024/04/29 22:28:17 by plouvel          ###   ########.fr        #
+#    Updated: 2024/04/30 17:43:02 by plouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ OBJS_DIR=objs/
 COMPILER=nasm
 CFLAGS=-f elf64
 
-SRCS=ft_strlen.s
+SRCS=ft_strlen.s \
+	 ft_strcpy.s
 OBJS=$(addprefix $(OBJS_DIR), $(SRCS:.s=.o))
 
 NAME=libasm.so
