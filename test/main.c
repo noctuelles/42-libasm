@@ -6,7 +6,7 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:22:26 by plouvel           #+#    #+#             */
-/*   Updated: 2024/04/30 18:42:05 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:43:09 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 
 extern unsigned long long ft_strlen(const char *str);
-extern const char *ft_strcpy(char *dst, const char *src);
+extern char *ft_strcpy(char *dst, const char *src);
 
 static void assert_ft_strlen(const char *str)
 {
