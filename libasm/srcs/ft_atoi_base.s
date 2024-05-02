@@ -1,6 +1,7 @@
 section .text
     global ft_atoi_base
     global ft_check_base
+    global ft_get_base_nbr
 
     extern ft_isspace
 
@@ -68,10 +69,10 @@ ft_get_base_nbr:
     mov rcx, 0x00
     mov rax, -1
 .loop:
-    mov al, byte [rdi + rcx]
-    cmp al, NUL
+    mov bl, byte [rdi + rcx]
+    cmp bl, NUL
     jz .ret
-    cmp al, sil
+    cmp bl, sil
     je .ret_base_nbr
     inc rcx
     jmp .loop
