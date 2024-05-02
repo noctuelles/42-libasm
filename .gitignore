@@ -1,4 +1,5 @@
 libasm.a
+a.out
 tester
 objs
 test.c
