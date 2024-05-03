@@ -6,7 +6,7 @@
 #    By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 22:26:26 by plouvel           #+#    #+#              #
-#    Updated: 2024/05/02 18:21:17 by plouvel          ###   ########.fr        #
+#    Updated: 2024/05/03 12:27:38 by plouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,9 @@ SRCS=ft_strlen.s \
 	 ft_write.s  \
 	 ft_strdup.s \
 	 ft_atoi_base.s \
+	 ft_list_create_elem.s \
+	 ft_list_push_front.s \
+	 ft_list_size.s \
 	 ft_read.s
 
 OBJS=$(addprefix $(OBJS_DIR), $(SRCS:.s=.o))

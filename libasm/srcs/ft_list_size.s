@@ -1,28 +1,19 @@
-/*
-    typedef struct s_list
-    {
-        void          *data;
-        struct s_list *next;
-    }               t_list;
-*/
+%include "srcs/ft_list.mac"
 section .text
     global ft_list_size
 
+; size_t ft_list_size(t_list *begin_list);
 ft_list_size:
     push   rbp
     mov rbp, rsp
-    sub rbp, 0x20
-    mov qword [rbp - 0x18], rdi
-    mov qword [rbp - 0x8], 0x0
+    mov rcx, 0
 .loop:
-    mov rax, qword [rbp - 0x18]
-    mov rax, qword [rax + 8] ; next
-    cmp rax, 0x0
+    cmp rdi, 0x00
     je .ret
-    add qword [rbp - 0x8], 0x1
+    mov rdi, qword [rdi + t_list.next]
+    inc rcx
     jmp .loop
 .ret:
-    mov rax, qword [rbp - 0x8]
-    add rbp, 0x20
+    mov rax, rcx
     pop rbp
     ret
