@@ -6,7 +6,7 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:22:26 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/03 17:52:23 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/03 18:44:01 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,18 @@ static void test_ft_write(void)
 
 int main(void)
 {
-    // test_ft_strlen();
-    // test_ft_strcpy();
-    // test_ft_strcmp();
-    // test_ft_strdup();
+    /* Mandatory part */
+    test_ft_strlen();
+    test_ft_strcpy();
+    test_ft_strcmp();
+    test_ft_strdup();
 
-    // test_ft_isspace();
+    /* Bonus part */
+    test_ft_isspace();
     test_ft_atoi_base();
-
-    // test_ft_list_create_elem();
-    // test_ft_list_push_front();
-    // test_ft_list_size();
-
+    test_ft_list_create_elem();
+    test_ft_list_push_front();
+    test_ft_list_size();
     test_ft_list_remove_if();
     test_ft_list_sort();
 
