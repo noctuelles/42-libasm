@@ -16,6 +16,6 @@ ft_strcmp:
     jmp .loop
 .ret:
     sub cl, ch
-    movsx rax, cl
+    movsx eax, cl
     pop rbp
     ret
