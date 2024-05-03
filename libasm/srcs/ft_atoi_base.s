@@ -85,5 +85,66 @@ ft_get_base_nbr:
 ft_atoi_base:
     push rbp
     mov rbp,rsp
+
+    mov r8, 0x00  ; base_nbr
+    mov r9, 0x01  ; sign
+    mov r10, 0x00 ; result
+    mov r11, 0x00 ; base_result
+
+    ; check the base passed in second argument (rsi). If the base is <= 2, the base is invalid
+    push rdi
+    mov rdi, rsi
+    call ft_check_base
+    pop rdi
+    mov r8, rax
+    cmp r8, 0x02
+    jnge .error
+
+.skip_whitespace_loop:
+    push rdi
+    movzx edi, byte [rdi]
+    call ft_isspace
+    pop rdi
+    cmp eax, 0x00
+    je .sign_loop
+    inc rdi
+    jmp .skip_whitespace_loop
+.sign_loop:
+    mov al, byte [rdi]
+    cmp al, '-'
+    je .negate_sign
+    cmp al, '+'
+    je .increment
+
+    jmp .result_loop
+.negate_sign:
+    neg r9 ; minus
+.increment:
+    inc rdi
+    jmp .sign_loop
+.result_loop:
+    push rdi 
+    push rsi
+    mov rax, rsi ; temp register
+    mov sil, byte [rdi]
+    mov rdi, rax
+    call ft_get_base_nbr
+    pop rsi
+    pop rdi
+
+    cmp rax, -0x01
+    je .end_result_loop
+    mov r11, rax ; base_result
+    imul r10, r8 ; 
+    add r10, r11
+    inc rdi
+    jmp .result_loop
+.end_result_loop:
+    mov rax, r10
+    imul rax, r9
+    jmp .ret
+.error:
+    mov eax, 0x00
+.ret:
     pop rbp
     ret

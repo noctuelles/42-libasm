@@ -6,12 +6,13 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:51:39 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/02 19:37:06 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/03 18:40:10 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <assert.h>
 #include <stdio.h>
+#include <limits.h>
 
 extern unsigned long ft_check_base(const char *base);
 extern long ft_get_base_nbr(const char *base, char c);
@@ -52,7 +53,28 @@ void test_ft_get_base_nbr()
 void test_ft_atoi_base()
 {
     printf("Testing ft_atoi_base...\n\n");
+
     test_ft_check_base();
     test_ft_get_base_nbr();
+
+    assert(ft_atoi_base("++123", "0123456789") == 123);
+    assert(ft_atoi_base("839271", "0123456789") == 839271);
+    assert(ft_atoi_base("1111", "01") == 15);
+    assert(ft_atoi_base("\n\t\nFF", "0123456789ABCDEF") == 0xFF);
+    assert(ft_atoi_base("ACFF", "0123456789ABCDEF") == 0xACFF);
+    assert(ft_atoi_base("       DEADBE", "0123456789ABCDEF") == 0xDEADBE);
+    assert(ft_atoi_base("  DEADBE", "0123456789ABCDEF") == 0xDEADBE);
+    assert(ft_atoi_base("\v\t10001101011", "01") == 1131);
+
+    assert(ft_atoi_base(" \n  ++-123", "0123456789") == -123);
+    assert(ft_atoi_base("++--123", "0123456789") == 123);
+    assert(ft_atoi_base("++-- 123", "0123456789") == 0);
+
+    assert(ft_atoi_base("10001101011", "01234567891") == 0 && "ft_atoi_base: invalid base");
+    assert(ft_atoi_base("10001101011", "01234  56789") == 0 && "ft_atoi_base: invalid base");
+    assert(ft_atoi_base("10001101011", "01234\n56789") == 0 && "ft_atoi_base: invalid base");
+    assert(ft_atoi_base("10001101011", "0123-456789") == 0 && "ft_atoi_base: invalid base");
+    assert(ft_atoi_base("10001101011", "01234567+9") == 0 && "ft_atoi_base: invalid base");
+
     printf("OK\n");
 }
