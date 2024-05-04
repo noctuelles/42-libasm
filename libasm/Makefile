@@ -6,7 +6,7 @@
 #    By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 22:26:26 by plouvel           #+#    #+#              #
-#    Updated: 2024/05/03 16:49:36 by plouvel          ###   ########.fr        #
+#    Updated: 2024/05/04 17:36:37 by plouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,24 +21,27 @@ CC=cc
 SRCS=ft_strlen.s \
 	 ft_strcpy.s \
 	 ft_strcmp.s \
-	 ft_isspace.s \
 	 ft_write.s  \
 	 ft_strdup.s \
-	 ft_atoi_base.s \
-	 ft_list_create_elem.s \
-	 ft_list_push_front.s \
-	 ft_list_size.s \
-	 ft_list_remove_if.s \
-	 ft_list_sort.s \
 	 ft_read.s
 
+SRCS_BONUS=ft_list_create_elem_bonus.s \
+		   ft_list_push_front_bonus.s \
+		   ft_list_size_bonus.s \
+		   ft_list_remove_if_bonus.s \
+		   ft_list_sort_bonus.s \
+		   ft_isspace_bonus.s \
+		   ft_atoi_base_bonus.s
+
 OBJS=$(addprefix $(OBJS_DIR), $(SRCS:.s=.o))
+OBJS_BONUS=$(addprefix $(OBJS_DIR), $(SRCS_BONUS:.s=.o))
 
 NAME=libasm.a
 RM=rm -rf
 MKDIR=mkdir -p
 
 all: $(NAME)
+bonus: $(OBJS) $(OBJS_BONUS) $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $@ $^
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.s | $(OBJS_DIR)
