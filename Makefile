@@ -6,7 +6,7 @@
 #    By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 22:26:26 by plouvel           #+#    #+#              #
-#    Updated: 2024/05/04 17:57:35 by plouvel          ###   ########.fr        #
+#    Updated: 2024/05/04 18:04:23 by plouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,10 +64,8 @@ $(LIBASM):
 $(LIBASM_BONUS):
 	$(MAKE) -C $(LIBASM_DIR) bonus
 clean:
-	$(MAKE) -C $(LIBASM_DIR) clean
 	$(RM) $(OBJS_DIR)
 fclean: clean
-	$(MAKE) -C $(LIBASM_DIR) fclean
 	$(RM) $(NAME)
 	$(RM) $(NAME_BONUS)
 re: fclean all
