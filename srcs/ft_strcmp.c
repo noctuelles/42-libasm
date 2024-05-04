@@ -6,7 +6,7 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:34:18 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/02 18:39:57 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/04 18:02:47 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ void test_ft_strcmp()
     assert_ft_strcmp("a", "-");
     assert_ft_strcmp("a", "b");
     assert_ft_strcmp("b", "a");
-    printf("OK\n");
+    printf("OK!\n");
 }

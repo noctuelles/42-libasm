@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_atoi_base_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:51:39 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/03 18:40:10 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/04 17:58:40 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ extern int ft_atoi_base(const char *str, const char *base);
 
 void test_ft_check_base()
 {
-    printf("\t->Testing ft_check_base... ");
-
     assert(ft_check_base("01") == 2);
     assert(ft_check_base("0123456789") == 10);
     assert(ft_check_base("0123456789abcdef") == 16);
@@ -32,27 +30,21 @@ void test_ft_check_base()
     assert(ft_check_base("01234 56789") == 0 && "ft_check_base: base with space character");
     assert(ft_check_base("0123456789+") == 0 && "ft_check_base: base with '+' character");
     assert(ft_check_base("0123456789-") == 0 && "ft_check_base: base with '-' character");
-
-    printf("OK!\n");
 }
 
 void test_ft_get_base_nbr()
 {
-    printf("\t->Testing ft_get_base_nbr... ");
-
     assert(ft_get_base_nbr("01", '0') == 0);
     assert(ft_get_base_nbr("01", '1') == 1);
 
     assert(ft_get_base_nbr("0123456789", '0') == 0);
     assert(ft_get_base_nbr("0123456789", '9') == 9);
     assert(ft_get_base_nbr("01234", '9') == -1);
-
-    printf("OK!\n");
 }
 
 void test_ft_atoi_base()
 {
-    printf("Testing ft_atoi_base...\n\n");
+    printf("Testing ft_atoi_base... ");
 
     test_ft_check_base();
     test_ft_get_base_nbr();

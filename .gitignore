@@ -1,8 +1,10 @@
 libasm.a
 a.out
 tester
+tester_bonus
 objs
 test.c
 fr.subject.pdf
 brk
 test.o
+libasm_bonus.a

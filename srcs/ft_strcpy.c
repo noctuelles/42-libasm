@@ -6,7 +6,7 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:33:12 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/02 18:40:05 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/04 18:02:43 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void test_ft_strcpy()
     assert_ft_strcpy("abc");
     assert_ft_strcpy("this is a very long string ! my dear god, it's so long !");
     assert_ft_strcpy("this is a very\0 long string !\0 my dear god, it's so long !");
-    printf("OK\n");
+    printf("OK!\n");
 }

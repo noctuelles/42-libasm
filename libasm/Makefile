@@ -6,7 +6,7 @@
 #    By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 22:26:26 by plouvel           #+#    #+#              #
-#    Updated: 2024/05/04 17:36:37 by plouvel          ###   ########.fr        #
+#    Updated: 2024/05/04 17:57:06 by plouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,11 +37,14 @@ OBJS=$(addprefix $(OBJS_DIR), $(SRCS:.s=.o))
 OBJS_BONUS=$(addprefix $(OBJS_DIR), $(SRCS_BONUS:.s=.o))
 
 NAME=libasm.a
+NAME_BONUS=libasm_bonus.a
 RM=rm -rf
 MKDIR=mkdir -p
 
 all: $(NAME)
-bonus: $(OBJS) $(OBJS_BONUS) $(NAME)
+bonus: $(NAME_BONUS)
+$(NAME_BONUS): $(OBJS) $(OBJS_BONUS)
+	ar rcs $@ $^
 $(NAME): $(OBJS)
 	ar rcs $@ $^
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.s | $(OBJS_DIR)
@@ -52,6 +55,7 @@ clean:
 	$(RM) $(OBJS_DIR)
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) $(NAME_BONUS)
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_sort.c                                     :+:      :+:    :+:   */
+/*   ft_list_sort_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:49:48 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/03 17:07:48 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/04 18:01:15 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
-#include "ft_list.h"
+#include "ft_list_bonus.h"
 
 extern void ft_list_sort(t_list **begin_list, int (*cmp)());
 extern void ft_list_push_front(t_list **begin_list, void *data);

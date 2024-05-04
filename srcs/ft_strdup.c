@@ -6,7 +6,7 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:36:13 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/02 18:40:11 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/04 18:02:39 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void test_ft_strdup(void)
     assert_ft_strdup("this is a very long string ! my dear god, it's so long !");
     assert_ft_strdup("this is a very\0 long string !\0 my dear god, it's so long !");
     assert_ft_strdup("1234567890");
-    printf("OK\n");
+    printf("OK!\n");
 }

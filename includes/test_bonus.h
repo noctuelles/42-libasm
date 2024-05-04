@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_bonus.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 18:22:26 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/04 17:59:56 by plouvel          ###   ########.fr       */
+/*   Created: 2024/05/02 18:30:12 by plouvel           #+#    #+#             */
+/*   Updated: 2024/05/04 18:00:41 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <test.h>
+#ifndef TEST_BONUS_H
+#define TEST_BONUS_H
 
-int main(void)
-{
-    test_ft_strlen();
-    test_ft_strcpy();
-    test_ft_strcmp();
-    test_ft_strdup();
-    test_ft_write();
-    test_ft_read();
+void test_ft_isspace();
+void test_ft_atoi_base();
+void test_ft_list_create_elem();
+void test_ft_list_push_front();
+void test_ft_list_size();
+void test_ft_list_remove_if();
+void test_ft_list_sort();
 
-    return (0);
-}
+#endif

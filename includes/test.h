@@ -6,7 +6,7 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:30:12 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/03 16:53:44 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/04 18:01:28 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,5 @@ void test_ft_strcmp();
 void test_ft_write();
 void test_ft_read();
 void test_ft_strdup();
-
-void test_ft_isspace();
-void test_ft_atoi_base();
-void test_ft_list_create_elem();
-void test_ft_list_push_front();
-void test_ft_list_size();
-void test_ft_list_remove_if();
-void test_ft_list_sort();
 
 #endif

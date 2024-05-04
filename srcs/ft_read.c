@@ -6,7 +6,7 @@
 /*   By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 17:02:15 by plouvel           #+#    #+#             */
-/*   Updated: 2024/05/04 17:26:44 by plouvel          ###   ########.fr       */
+/*   Updated: 2024/05/04 18:02:51 by plouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,5 @@ void test_ft_read(void)
 
     close(fd);
 
-    printf("OK\n");
+    printf("OK!\n");
 }
