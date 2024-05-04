@@ -5,11 +5,15 @@ section .text
     extern ft_strcpy
     extern malloc
 
+; ft_strdup: duplicate a string
+; ARGS: rsi = string to duplicate
+; MODIFIES: rdi
+; RETURN: rax = duplicated string
 ft_strdup:
     push rbp
     mov rbp, rsp
     call ft_strlen
-    inc rax
+    inc rax ; add 1 for null terminator
     push rdi
     mov rdi, rax
     call malloc

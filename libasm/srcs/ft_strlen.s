@@ -1,4 +1,11 @@
-global ft_strlen 
+section .text
+    global ft_strlen 
+
+; ft_strlen - returns the length of a string
+; rdi - pointer to the string
+; MODIFIES: rax, rdi
+; ARGS: rdi - pointer to the string
+; RETURNS: rax - length of the string
 ft_strlen:
     ;function prologue
     push rbp

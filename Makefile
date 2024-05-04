@@ -6,7 +6,7 @@
 #    By: plouvel <plouvel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 22:26:26 by plouvel           #+#    #+#              #
-#    Updated: 2024/05/03 16:53:26 by plouvel          ###   ########.fr        #
+#    Updated: 2024/05/04 17:07:49 by plouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ SRCS=ft_strlen.c \
 	 ft_strcpy.c \
 	 ft_strcmp.c \
 	 ft_strdup.c \
+	 ft_write.c \
+	 ft_read.c  \
      ft_isspace.c \
 	 ft_atoi_base.c \
 	 ft_list_create_elem.c \

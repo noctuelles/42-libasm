@@ -1,4 +1,10 @@
-global ft_strcpy
+section .text
+    global ft_strcpy
+
+; ft_strcpy copies the string src to dst
+; The function returns the pointer to the destination string
+; ARGS : rdi = dst, rsi = src
+; MODIFIES: rdi, rsi
 ft_strcpy:
     ;function prologue
     push rbp
